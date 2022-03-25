@@ -1,0 +1,14 @@
+
+version: 0.0
+Resources:
+  - myLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "wotan-box"
+        Alias: "box"
+        CurrentVersion: "1"
+        TargetVersion: "2"
+# https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda
+#Hooks:
+#  - BeforeAllowTraffic: "<SanityTestHookLambdaFunctionName>"
+#  - AfterAllowTraffic: "<ValidationTestHookLambdaFunctionName>"
